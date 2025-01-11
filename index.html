@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/6458c3cafe.js" crossorigin="anonymous"></script>
+<!-- Font Family -->
+<style>
+    *{
+        font-family: "Open Sans", sans-serif;
+    }
+    #news {
+    text-align: left;
+    max-width: 800px; /* Set a maximum width for the news container */
+    margin: 20px auto; /* Center the container */
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+}
+/* Basic Footer Styles */
+footer {
+    background: #000; /* Match the dark background */
+    color: #fff;
+    padding: 20px 0;
+    font-family: sans-serif; /* Consistent font */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Distribute sections evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    max-width: 1200px; /* Limit width for larger screens */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Add some side padding */
+}
+
+.footer-section {
+    flex: 1 1 300px; /* Each section takes up equal space, min width 300px */
+    margin-bottom: 20px; /* Space between sections vertically on smaller screens */
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff; /* Add a subtle underline */
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.footer-section a:hover {
+    color: #ccc; /* Slightly lighter color on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #333; /* Separator line */
+    font-size: 0.8em;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically */
+        text-align: center; /* Center text within sections */
+    }
+    .footer-section {
+        margin-bottom: 30px; /* Increased vertical spacing */
+        padding: 0; /* Remove side padding */
+    }
+}
+</style>
+</head>
+<body>
+    <header class="relative">
+      <!-- Navbar starts here -->
+        <nav class="shadow3 bg-black flex items-center justify-between px-5 ">
+            <div  class="flex items-center justify-center gap-2.5">
+                <a href="#"><img class="h-17 w-20" src="images/Logo.png"></a>
+                <a href="#" class=""> <h1 class="text-3xl font-semibold text-white">AstroHub</h1></a>
+            </div>
+            <div>
+                <ul class="flex items-center -ml-28 text-lg">
+                    <li class="hover:bg-white hover:text-black h-14 px-3 flex items-center text-white hover:cursor-pointer">Home</li>
+                    <li class="hover:bg-white hover:text-black h-14 px-3 flex items-center text-white hover:cursor-pointer">Explore</li>
+                    <li class="hover:bg-white hover:text-black h-14 px-3 flex items-center text-white hover:cursor-pointer">Gallery</li>
+                    <li class="hover:bg-white hover:text-black h-14 px-3 flex items-center text-white hover:cursor-pointer" id="#contact">Contact</li>
+                    <li class="hover:bg-white hover:text-black h-14 px-3 flex items-center text-white hover:cursor-pointer">About us</li>
+                </ul>
+            </div>
+            <div>
+                <button class="shadow1 bg-white px-4 py-1 text-black rounded-lg text-lg mr-2 border-2 border-black hover:bg-[#222222]">Sign-Up</button>
+                <button class="shadow2 bg-white px-4 py-1 text-black rounded-lg text-lg mr-2 border-2 border-black hover:bg-[#222222]">Login</button>
+            </div>
+        </nav>
+        <!-- Text on Banner -->
+        <div class="absolute z-50 top-[53%] right-[20%]">
+          <h1 style="color: white;font-weight: 900;font-size: 60px;text-shadow: 2px 2px 2px black;">Explore the Universe with us</h1>
+        </div>
+        <div>
+          <!-- Carousel (SlideShow) -->
+            <div class="carousel w-full shadow3 mt-5">
+              <!-- First Pic -->
+  <div id="slide1" class="carousel-item relative w-full mt-12">
+    <img
+      src="images/banner-1.jpeg"
+      class="w-full h-[400px] object-cover" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide4" class="btn btn-circle hover:bg-black hover:text-white">❮</a>
+      <a href="#slide2" class="btn btn-circle hover:bg-black hover:text-white">❯</a>
+    </div>
+  </div>
+  <!-- Second Pic -->
+  <div id="slide2" class="carousel-item relative w-full">
+    <img
+      src="images/iceland-5586225_960_720.jpg"
+      class="w-full h-[400px] object-cover" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide1" class="btn btn-circle hover:bg-black hover:text-white">❮</a>
+      <a href="#slide3" class="btn btn-circle hover:bg-black hover:text-white">❯</a>
+    </div>
+  </div>
+  <!-- Third Pic -->
+  <div id="slide3" class="carousel-item relative w-full">
+    <img
+      src="images/astronomy-1868560_960_720.jpg"
+      class="w-full h-[400px] object-cover" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide2" class="btn btn-circle hover:bg-black hover:text-white">❮</a>
+      <a href="#slide4" class="btn btn-circle hover:bg-black hover:text-white">❯</a>
+    </div>
+  </div>
+  <!-- Fourth Pic -->
+  <div id="slide4" class="carousel-item relative w-full">
+    <img
+      src="images/banner-4.jpeg"
+      class="w-full h-[400px] object-cover" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide3" class="btn btn-circle hover:bg-black hover:text-white">❮</a>
+      <a href="#slide1" class="btn btn-circle hover:bg-black hover:text-white">❯</a>
+    </div>
+  </div>
+</div>
+        </div>
+    </header>
+    <main>
+      <!-- Cards rows start here -->
+        <section>
+          <h1 class="mt-5 mx-10 text-5xl text-center font-bold text-black""><u>Learn about them</u></h1>
+          <!-- First Row -->
+          <div class="flex justify-center gap-6 mt-8 mx-auto"> <div class="card bg-base-100 w-96 shadow-xl">
+            <figure class="h-52">
+                <img class="rounded-full object-cover w-full h-full" src="images/stars-1837306_640.jpg" alt="Stars" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title text-black">Stars</h2>
+                <a href="stars.html" class="btn btn-primary text-white bg-black border-black hover:bg-gray-950 hover:border-black">Learn</a>
+            </div>
+        </div>
+    
+        <div class="card bg-base-100 w-96 shadow-xl">
+            <figure class="h-52">
+                <img class="rounded-full object-cover w-full h-full" src="images/Galaxy.jpeg" alt="Galaxies" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title text-black">Galaxies</h2>
+                <a href="galaxies.html" class="btn btn-primary text-white bg-black border-black hover:bg-gray-950 hover:border-black">Learn</a>
+            </div>
+        </div>
+    
+        <div class="card bg-base-100 w-96 shadow-xl">
+            <figure class="h-52">
+                <img class="rounded-full object-cover w-full h-full" src="images/Planets.jpeg" alt="Planets" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title text-black">Planets</h2>
+                <a href="planets.html" class="btn btn-primary text-white bg-black border-black hover:bg-gray-950 hover:border-black">Learn</a>
+            </div>
+        </div>
+    
+    </div>
+        </section>
+        <!-- Container -->
+        <div class="container mx-auto bg-black border-2 border-black rounded-xl	mt-5 text-white text-center mb-3 shadow3">
+          <section id="news" class="section">
+            <h2><u>Latest Astronomy News</u></h2>
+            <div id="#news">
+                <p>Scientists have discovered 44 previously unknown stars which had been hidden behind a cluster of galaxies. Physicists at Durham University helped discover the stars in the Dragon Arc galaxy nearly 6.5 billion light-years from Earth as part of an international research project.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+      <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Astronomy</h3>
+                <p>Scientists have discovered a previously unknown cosmic structure, hiding behind a cluster of galaxies. Dubbed the 'South Pole Wall,' it stretches across 1.37 billion light-years, making it one of the largest structures ever observed in the known universe.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: irtizasarwar2011@gmail.com</p>
+                <p>Phone: +880-1745-921-446</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AstroHub. All rights reserved.</p>
+        </div>
+    </footer>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
